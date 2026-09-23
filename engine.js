@@ -46,13 +46,15 @@ return time;
 
   function onPlayerStateChange(ebent) {
     if (ebent.data == YT.PlayerState.ENDED) {
-        nextVid()
+        nextVid();
     }
   }
 
 
 function nextVid() {
  var rand = something(eps.length);
+var tim = grepBeans();
+console.log("t", tim);
  loadVid( eps[rand], grepBeans() );
 }
 
