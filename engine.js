@@ -2,10 +2,14 @@
 
 
 function grepBeans() {
+console.log("cock");
  var beans = document.forms[0];
  var time = 10;//defualt
  for (const bean of beans) {
-  if (bean.checked) return bean.value;
+  if (bean.checked) {
+   console.log(bean.value);
+   return bean.value;
+  }
 }
 return time;
 
