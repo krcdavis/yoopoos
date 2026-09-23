@@ -8,7 +8,8 @@ console.log("cock");
  for (const bean of beans) {
   if (bean.checked) {
    console.log(bean.value);
-   return bean.value;
+   //return bean.value;///.... i just had a revelation
+   time = parseInt(bean.value);
   }
 }
 return time;
@@ -46,6 +47,7 @@ return time;
 
   function onPlayerStateChange(ebent) {
     if (ebent.data == YT.PlayerState.ENDED) {
+	console.log("evennt");
         nextVid();
     }
   }
@@ -62,6 +64,7 @@ console.log("t", tim);
 function loadVid(vid, time) {
 var start = something(vid[1]-time);
 var end = start + time;
+console.log(end);
 
 player.loadVideoById({'videoId': vid[0],
                'startSeconds': start,
