@@ -1,6 +1,7 @@
 ///draft
 
 var muhFlag = false;
+var cockTemp = true;
 
 function grepBeans() {
 console.log("cock");//THIS is called twice sometimes and i don't know why
@@ -8,7 +9,7 @@ console.log("cock");//THIS is called twice sometimes and i don't know why
  var time = 10;//defualt
  for (const bean of beans) {
   if (bean.checked) {
-   console.log("c", bean.value);
+   //console.log("c", bean.value);
    //return bean.value;///.... i just had a revelation
    time = parseInt(bean.value);//bruh
   }
@@ -53,7 +54,9 @@ console.log("elp");
   function onPlayerStateChange(ebent) {
     if (ebent.data == YT.PlayerState.ENDED) {
 	console.log("evennt");//this is called twice sometimes and i don't know wny
-        nextVid();
+        if (cockTemp){
+	cockTemp=false;
+        nextVid();}
     }
   }
 
@@ -74,6 +77,7 @@ console.log("e", end);
 player.loadVideoById({'videoId': vid[0],
                'startSeconds': start,
                'endSeconds': end});
+cockTemp = true;
 }//loadvid
 
 
