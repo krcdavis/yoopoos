@@ -1,5 +1,6 @@
 ///draft
 
+var muhFlag = false;
 
 function grepBeans() {
 console.log("cock");//THIS is called twice sometimes and i don't know why
@@ -16,6 +17,9 @@ return time;
 
 }
 
+function flipFlag() {
+muhFlag = !muhFlag;
+}
 
   var tag = document.createElement('script');
   tag.id = 'iframe-demo';
@@ -42,8 +46,8 @@ return time;
 
   function onPlayerReady(ebent) {
 console.log("elp");
-    player.setVolume(50)
-    nextVid()
+    player.setVolume(50);
+    nextVid();
   }
 
   function onPlayerStateChange(ebent) {
@@ -58,7 +62,7 @@ function nextVid() {
  var rand = something(eps.length);
 var tim = grepBeans();
 console.log("t", tim);
- loadVid( eps[rand], grepBeans() );
+ loadVid( eps[rand], tim );//that'd do it
 }
 
 
